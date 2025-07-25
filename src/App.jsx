@@ -1,68 +1,50 @@
-// import image1 from "./images/i1.jpg";
-// import image2 from "./images/12.jpg";
-// import image3 from "./images/i3.jpg";
-// import image4 from "./images/i4.jpg";
-
 // const App=()=>{
+
+//   const display=(fm,e)=>{
+//     console.log(fm)
+//     console.log(e)
+//     alert(e.type)
+//   }
 //   return(
 //     <>
-//       <img src={image1} width="300" height="300"/>
-//       <img src={image2} width="300" height="300"/>
-//       <img src={image3} width="300" height="300"/>
-//       <img src={image4} width="300" height="300"/>
+//      <h1>Welcome to react class</h1>
+//      <button onClick={(e)=>{display("Prashant",e)}}>click here</button>
 //     </>
 //   )
 // }
 // export default App;
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 
-import Carousel from 'react-bootstrap/Carousel';
-import myimg from "./images/download.jpeg";
-import myimg1 from "./images/download1.jpeg";
-import myimg2 from "./images/download2.jpeg";
+// const App=()=>{
+
+//   const myval=(e)=>{
+//     let mytype=e.type;
+//     let mynm=e.target.name;
+//     let myvalue=e.target.value;
+//     alert(`type:${mytype} name:${mynm} value:${myvalue}`);
+//   }
+//   return(
+//     <>
+//     <h1>hello</h1>
+//     <button name="btn1" value="12" onClick={myval}>Click Here</button>
+//     </>
+//   )
+// }
+// export default App;
+
 
 const App=()=>{
+
+  const getval=(e)=>{
+    let name=e.target.name;
+    let value=e.target.value;
+    console.log({[name]:value})
+  }
   return(
     <>
-     <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-
-         <Carousel fade>
-      <Carousel.Item>
-        <img src={myimg} height="100%" width="100%" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src={myimg1} height="100%" width="100%"  />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src={myimg2} height="100%" width="100%"  />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <h1>hello</h1>
+    Enter name: <input type="text" name="stunm" value="prashant" onChange={getval}/>
     </>
   )
 }
 export default App;
+
