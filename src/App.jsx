@@ -1,44 +1,5 @@
-// import { useState } from "react";
-
-// const App=()=>{
-//   // const[name, setName]=useState("")
-//   // const[city, setCity]=useState("")
-//   // const handleSubmit=()=>{
-//   //   console.log({name:name,city:city});
-//   // }
-//   const[empno,setEmpno]=useState("")
-//   const[name,setName]=useState("")
-//   const[city,setCity]=useState("")
-//   const[sallery,setSallery]=useState("")
-//   const handleSubmit=()=>{
-//     console.log({empno:empno,name:name,city:name,sallery:sallery})
-//   }
-//   return(
-//     // <>
-//     // <h1>Application Form</h1>
-//     // Enter name: <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}}/>
-//     // <br /><br />
-//     // Enter city: <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/>
-//     // <br />
-//     // <button onClick={handleSubmit}>save</button>
-//     // </>
-//     <>
-//     <h1>Application form</h1>
-//     Enter Emp no: <input type="text" value={empno} onChange={(e)=>{setEmpno(e.target.value)}}/>
-//     <br />
-//     Enter name: <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}}/>
-//     <br />
-//     Enter city: <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}} />
-//     <br />
-//     Enter sallery: <input type="text" value={sallery} onChange={(e)=>{setSallery(e.target.value)}} />
-//     <br />
-//     <button onClick={handleSubmit}>Save</button>
-//     </>
-//   )
-// }
-// export default App;
-
 import { useState } from "react";
+import axios from "axios";
 const App=()=>{
   const [input,setInput]=useState({})
   const handleInput=(e)=>{
@@ -47,18 +8,25 @@ const App=()=>{
     setInput(values=>({...values,[name]:value}))
     console.log(input);
   }
+  const handleSubmit=async()=>{
+    let api="http://localhost:3000/data"
+    const response=await axios.post(api,input);
+    console.log(response);
+    alert("data saved successfully");
+  }
+
   return(
     <>
     <h1>Application Form</h1>
-    Enter Emp No: <input type="text" name="empno" onChange={handleInput} />
-    <br />
+    Enter Roll No: <input type="text" name="rollno" onChange={handleInput} />
+    <br /><br />
     Enter Name: <input type="text" name="name" onChange={handleInput} />
-    <br />
+    <br /><br />
     Enter City: <input type="text" name="city" onChange={handleInput} />
-    <br />
-    Enter Sallery: <input type="text" name="sallery" onChange={handleInput} />
-    <br />
-    <button>Submit</button>
+    <br /><br />
+    Enter Fees: <input type="text" name="fees" onChange={handleInput} />
+    <br /><br />
+    <button onClick={handleSubmit}>Submit</button>
 
     </>
   )

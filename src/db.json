@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "Rollno": 101,
+      "Name": "Prashant",
+      "City": "Bhopal",
+      "Fees": 5454,
+      "id": "d46f"
+    },
+    {
+      "id": "9724",
+      "rollno": "238",
+      "name": "Prashant Patel",
+      "city": "Narsinghpur",
+      "fees": "5400"
+    }
+  ]
+}
