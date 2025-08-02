@@ -1,33 +1,28 @@
-import { useState } from "react";
-import axios from "axios";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Layout from "./layout";
+import Home from "./home";
+import Insert from "./insert";
+import Display from "./display";
+import Search from "./search";
+import Update from "./update";
+import Contact from "./contact";
 const App=()=>{
-  const [input,setInput]=useState({})
-  const handleInput=(e)=>{
-    let name=e.target.name;
-    let value=e.target.value;
-    setInput(values=>({...values,[name]:value}))
-    console.log(input);
-  }
-  const handleSubmit=async()=>{
-    let api="http://localhost:3000/data"
-    const response=await axios.post(api,input);
-    console.log(response);
-    alert("data saved successfully");
-  }
-
   return(
     <>
-    <h1>Application Form</h1>
-    Enter Roll No: <input type="text" name="rollno" onChange={handleInput} />
-    <br /><br />
-    Enter Name: <input type="text" name="name" onChange={handleInput} />
-    <br /><br />
-    Enter City: <input type="text" name="city" onChange={handleInput} />
-    <br /><br />
-    Enter Fees: <input type="text" name="fees" onChange={handleInput} />
-    <br /><br />
-    <button onClick={handleSubmit}>Submit</button>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout/>}>
 
+          <Route path="Home" element={<Home/>}/>
+          <Route path="Insert" element={<Insert/>}/>
+          <Route path="Contact" element={<Contact/>}/>   
+          <Route path="Display" element={<Display/>}/>
+          <Route path="Search" element={<Search/>}/>
+          <Route path="Update" element={<Update/>}/>
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
