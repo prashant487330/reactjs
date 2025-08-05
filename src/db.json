@@ -1,25 +1,25 @@
 {
   "data": [
     {
-      "Rollno": 101,
-      "Name": "Prashant",
-      "City": "Bhopal",
-      "Fees": 5454,
-      "id": "d46f"
-    },
-    {
-      "id": "9724",
+      "id": "e2f0",
       "rollno": "238",
       "name": "Prashant Patel",
       "city": "Narsinghpur",
-      "fees": "5400"
+      "fees": "50000"
     },
     {
-      "id": "e2f0",
-      "rollno": "238",
-      "name": "Prashshant Patel",
-      "city": "Narsinghpur",
-      "fees": "50000"
+      "id": "f202",
+      "rollno": "654",
+      "name": "aalam",
+      "city": "ratlam",
+      "fees": "60000"
+    },
+    {
+      "id": "c653",
+      "rollno": "500",
+      "name": "karan",
+      "city": "delhi",
+      "fees": "464873"
     }
   ]
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { ToastContainer,toast } from "react-toastify";
 
 const Insert=()=>{
   const [input,setInput]=useState({})
@@ -13,7 +14,7 @@ const Insert=()=>{
     let api="http://localhost:3000/data"
     const response=await axios.post(api,input);
     console.log(response);
-    alert("data saved successfully");
+    toast("data saved successfully");
   }
 
   return(
@@ -28,7 +29,7 @@ const Insert=()=>{
     Enter Fees: <input type="text" name="fees" onChange={handleInput} />
     <br /><br />
     <button onClick={handleSubmit}>Submit</button>
-
+    <ToastContainer/>
     </>
   )
 }

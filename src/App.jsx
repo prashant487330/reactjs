@@ -6,6 +6,7 @@ import Display from "./display";
 import Search from "./search";
 import Update from "./update";
 import Contact from "./contact";
+import MyEdit from "./MyEdit";
 const App=()=>{
   return(
     <>
@@ -13,13 +14,13 @@ const App=()=>{
       <Routes>
         <Route path="/" element={<Layout/>}>
 
-          <Route path="Home" element={<Home/>}/>
-          <Route path="Insert" element={<Insert/>}/>
-          <Route path="Contact" element={<Contact/>}/>   
-          <Route path="Display" element={<Display/>}/>
-          <Route path="Search" element={<Search/>}/>
-          <Route path="Update" element={<Update/>}/>
-
+          <Route path="home" element={<Home/>}/>
+          <Route path="insert" element={<Insert/>}/>
+          <Route path="contact" element={<Contact/>}/>   
+          <Route path="display" element={<Display/>}/>
+          <Route path="search" element={<Search/>}/>
+          <Route path="update" element={<Update/>}/>
+          <Route path="myedit/:id" element={<MyEdit/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
