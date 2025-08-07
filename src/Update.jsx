@@ -44,7 +44,7 @@ const Update=()=>{
     return(
         <>
         <h1>Welcome to Update page</h1>
-        <table border="1" width="700">
+        <table border="1" width="700" align="center">
             <tr>
                 <th>Rollno</th>
                 <th>Name</th>

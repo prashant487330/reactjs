@@ -28,7 +28,7 @@ const Display=()=>{
     return(
         <>
         <h1>Welcome to display page</h1>
-        <table border="1">
+        <table border="1" align="center">
             <tr>
                 <th>Rollno</th>
                 <th>Name</th>
